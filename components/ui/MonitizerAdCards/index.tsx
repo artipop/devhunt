@@ -40,7 +40,7 @@ function MonitizorAdCards() {
     <iframe
       width="100%"
       height="150"
-      frameborder="0"
+      frameBorder="0"
       style={{ minHeight: '300px' }}
       className="selldigitals-widget"
       data-min-height="15"
