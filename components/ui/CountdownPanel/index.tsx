@@ -67,8 +67,8 @@ const People = () => {
     <div className="mt-3">
       <ul className="max-w-4xl mx-auto gap-3 flex flex-wrap items-center">
         {people.map((person) => (
-          <li 
-            key={person.href} 
+          <li
+            key={person.href}
             className="flex-none w-8 h-8 hover:scale-105 duration-200 sm:w-10 sm:h-10"
           >
             <a data-state="closed" href={person.href}>
@@ -231,16 +231,6 @@ export default () => {
         <div className="max-w-lg mt-2 text-slate-400">
           100k+ developers found Dev Tools here.
           <People/>
-          <div className="mt-3 block">
-            See how{' '}
-            <a
-              className="underline transition-opacity hover:text-scale-1200"
-              href="https://twitter.com/johnrushx/status/1661534492949872641"
-            >
-              it started
-            </a>
-            .
-          </div>
           <div className='block p-2'></div>
           {/*<SponsorsSection />*/}
         </div>

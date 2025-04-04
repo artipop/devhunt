@@ -17,8 +17,6 @@ import ModalBannerCodeClient from '@/components/ui/ModalBannerCode/ModalBannerCo
 import dynamic from 'next/dynamic';
 import ProfileFormModal from '@/components/ui/ProfileFormModal';
 
-const ChatWindow = dynamic(() => import('@/components/ui/ChatWindow'), { ssr: false });
-
 export type TypedSupabaseClient = SupabaseClient<Database>;
 
 const { title, description, ogImage } = {
@@ -71,7 +69,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body className={inter.className} id="root">
         <main>
-          <ChatWindow />
           <SupabaseProvider user={profile as Profile} session={session}>
             <SupabaseListener serverAccessToken={session?.access_token} />
             <ProfileFormModal isModalOpen={user ? (profileNoCache?.social_url == null ? true : false) : false} />
