@@ -46,6 +46,11 @@ To restore the dump, execute the following command:
 psql -h db.<ReferenceID>.supabase.co -U postgres -d postgres < /supabase/dump.sql
 ```
 
+kinda:
+```bash
+psql postgresql://postgres.[PROJECT_ID]:[DB_PSWD]@aws-0-eu-central-1.pooler.supabase.com:5432/postgres < ./supabase/dump.sql
+```
+
 You will be prompted to enter the database password. This can be found in `Project Settings` -> `Database Settings` -> `Database Password`. Alternatively, use the password you saved during project creation.
 
 ### Set Up `.env.local` Configuration
